@@ -103,7 +103,7 @@ export default {
       try {
         this.loading = true
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=474ac197&i=${this.$route.params.id}`
+          `https://www.omdbapi.com/?apikey=474ac197&i=${this.$route.params.id}`
         );
         this.movieDetail = await response.json();
       } catch (error) {

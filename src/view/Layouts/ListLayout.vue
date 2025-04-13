@@ -68,7 +68,7 @@ export default {
             try {
                 this.loading = true
                 const response = await fetch(
-                    'http://www.omdbapi.com/?apikey=474ac197&s=end&type=movie'
+                    'https://www.omdbapi.com/?apikey=474ac197&s=end&type=movie'
                 );
                 const data = await response.json();
                 this.dataList = data.Search;
@@ -82,7 +82,7 @@ export default {
             try {
                 this.loading = true
                 const response = await fetch(
-                    'http://www.omdbapi.com/?apikey=474ac197&s=movie&type=movie'
+                    'https://www.omdbapi.com/?apikey=474ac197&s=movie&type=movie'
                 );
                 const data = await response.json();
                 this.dataList = data.Search;
@@ -96,7 +96,7 @@ export default {
             try {
                 this.loading = true
                 const response = await fetch(
-                    'http://www.omdbapi.com/?apikey=474ac197&s=movie&type=series'
+                    'https://www.omdbapi.com/?apikey=474ac197&s=movie&type=series'
                 );
                 const data = await response.json();
                 this.dataList = data.Search;

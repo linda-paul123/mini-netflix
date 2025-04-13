@@ -69,7 +69,7 @@ export default {
       try {
         this.loadingPopularMovies = true
         const response = await fetch(
-          'http://www.omdbapi.com/?apikey=474ac197&s=end&type=movie'
+          'https://www.omdbapi.com/?apikey=474ac197&s=end&type=movie'
         );
         const data = await response.json();
         this.popularMovies = data.Search;
@@ -83,7 +83,7 @@ export default {
       try {
         this.loadingTrendingMovies = true
         const response = await fetch(
-          'http://www.omdbapi.com/?apikey=474ac197&s=movie&type=movie'
+          'https://www.omdbapi.com/?apikey=474ac197&s=movie&type=movie'
         );
         const data = await response.json();
         this.trendingMovies = data.Search;
@@ -97,7 +97,7 @@ export default {
       try {
         this.loadingPopularSeries = true
         const response = await fetch(
-          'http://www.omdbapi.com/?apikey=474ac197&s=movie&type=series'
+          'https://www.omdbapi.com/?apikey=474ac197&s=movie&type=series'
         );
         const data = await response.json();
         this.popularSeries = data.Search;

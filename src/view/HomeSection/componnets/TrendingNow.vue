@@ -28,7 +28,7 @@ export default {
     async getTrendingNow() {
       try {
         const response = await fetch(
-          "http://www.omdbapi.com/?apikey=474ac197&s=movie&type=series&y=2024"
+          "https://www.omdbapi.com/?apikey=474ac197&s=movie&type=series&y=2024"
         );
         const data = await response.json();
         this.trendingMovies = data.Search;
