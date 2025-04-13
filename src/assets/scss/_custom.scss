@@ -1,0 +1,184 @@
+// ==========================
+// Mixins
+// ==========================
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin font-weight($size) {
+  font-weight: $size;
+}
+
+@mixin border-radius($size) {
+  border-radius: $size;
+}
+
+@mixin height($size) {
+  height: $size;
+}
+
+@mixin min-height($size) {
+  min-height: $size;
+}
+
+@mixin max-height($size) {
+  max-height: $size;
+}
+
+@mixin width($size) {
+  width: $size;
+}
+
+@mixin min-width($size) {
+  min-width: $size;
+}
+
+@mixin max-width($size) {
+  max-width: $size;
+}
+
+@mixin text-color($color) {
+  color: $color;
+}
+
+@mixin background-color($color) {
+  background-color: $color;
+}
+
+@mixin border-color($color) {
+  border-color: $color;
+}
+
+// ==========================
+// Size Utilities
+// ==========================
+@each $size in 1px, 2px, 3px, 4px, 5px, 6px, 7px, 8px, 9px, 10px, 11px, 12px,
+  13px, 14px, 15px, 16px, 17px, 18px, 19px, 20px, 21px, 22px, 23px, 24px, 25px,
+  26px, 27px, 28px, 29px, 30px, 31px, 32px, 33px, 34px, 35px, 36px, 37px, 38px,
+  39px, 40px, 41px, 42px, 43px, 44px, 45px, 46px, 47px, 48px, 49px, 50px, 100px,
+  120px, 150px, 200px, 230px, 250px, 270px, 300px, 400px, 500px
+{
+  .fs-#{$size} {
+    @include font-size($size);
+  }
+  .border-#{$size} {
+    @include border-radius($size);
+  }
+  .h-#{$size} {
+    @include height($size);
+  }
+  .min-h-#{$size} {
+    @include min-height($size);
+  }
+  .max-h-#{$size} {
+    @include max-height($size);
+  }
+  .w-#{$size} {
+    @include width($size);
+  }
+  .min-w-#{$size} {
+    @include width($size);
+  }
+  .max-w-#{$size} {
+    @include width($size);
+  }
+}
+
+@each $size in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
+  .fw-#{$size} {
+    @include font-weight($size);
+  }
+}
+
+// ==========================
+// Colors
+// ==========================
+$colors: (
+  "primary": #007bff,
+  "secondary": #6c757d,
+  "success": #28a745,
+  "danger": #dc3545,
+  "warning": #ffc107,
+  "info": #17a2b8,
+  "light": #f8f9fa,
+  "dark": #343a40,
+  "black": #000000,
+  "white": #ffffff,
+
+  // Neutral colors
+  "gray": #868e96,
+  "gray-dark": #343a40,
+  "gray-mid": #4b4b4b,
+  "gray-light": #f1f3f5,
+  "gray-lighter": #e9ecef,
+
+  // Blue shades
+  "blue": #1687ff,
+  "blue-pale": #eaf4ff,
+  "blue-light": #5bc0de,
+  "blue-dark": #004085,
+
+  // Green shades
+  "green": #28a745,
+  "green-light": #71d78d,
+  "green-dark": #1e7e34,
+
+  // Red shades
+  "red": #dc3545,
+  "red-light": #ff5b6a,
+  "red-dark": #c82333,
+  "red-dark-light": #ff00189e,
+
+  // Yellow shades
+  "yellow": #ffc107,
+  "yellow-light": #fff3cd,
+  "yellow-dark": #e0a800,
+
+  // Purple shades
+  "purple": #6f42c1,
+  "purple-light": #d5b7e8,
+  "purple-dark": #5a2c8c,
+
+  // Pink shades
+  "pink": #e83e8c,
+  "pink-light": #f8d7e0,
+  "pink-dark": #c2185b,
+
+  // Orange shades
+  "orange": #fd7e14,
+  "orange-light": #ff9f43,
+  "orange-dark": #e46025,
+
+  // Others
+  "coral": #ff7f50,
+  "teal": #20c997,
+  "navy": #001f3d,
+  "indigo": #6610f2,
+  "violet": #8a2be2,
+  "brown": #a52a2a,
+  "olive": #808000,
+  "lime": #00ff00,
+  "peach": #ffcc99,
+  "transparent": #ffffff00,
+
+  "black-overlay": #000000b3,
+);
+
+// ==========================
+// Color Classes
+// ==========================
+@each $name, $color in $colors {
+  .txt-#{$name} {
+    @include text-color($color);
+  }
+
+  .bg-#{$name} {
+    @include background-color($color);
+  }
+
+  .border-clr-#{$name} {
+    @include border-color($color);
+    border-width: 1px;
+    border-style: solid;
+  }
+}

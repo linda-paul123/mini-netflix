@@ -1,0 +1,25 @@
+.nav {
+    &.nav-tabs{
+        background-color: transparent;
+        border-bottom: transparent;
+    }
+    .nav-item{
+        background-color: transparent;
+        .nav-link{
+            border: none;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+            &:hover{
+                border: none;
+            }
+            &.active{
+                background-color: transparent;
+                color: red;
+                border-bottom: 2px solid red;
+            }
+        }
+    }
+}

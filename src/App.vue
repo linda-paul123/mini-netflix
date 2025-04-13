@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NetflixHeader />
+    <router-view />
   </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router';
+import NetflixHeader from './view/HomeSection/componnets/NetflixHeader.vue';
+
 
 export default {
-  name: 'App',
+  name: 'MiniNetflix',
   components: {
-    HelloWorld
-  }
+    RouterView,
+    NetflixHeader
+    }
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  // color: #2c3e50;
+  background-color: #28282c;
+}
+html, body, #app {
+  background-color: black;
 }
 </style>
