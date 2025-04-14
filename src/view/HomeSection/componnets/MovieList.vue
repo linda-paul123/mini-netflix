@@ -2,21 +2,21 @@
   <div class="txt-gray-light">
     <div v-if="trendingMovies" class="mt-4">
       <h4 class="txt-gray-light fw-600 text-start px-2">Trending Now</h4>
-      <div class="scrolling-wrapper d-flex flex-nowrap gap-2 overflow-x-auto overflow-y-hidden">
-        <router-link
+      <div class="d-flex align-items-center h-300px scrolling-wrapper px-2" style="overflow-x: auto;">
+        <div class="d-flex flex-row gap-3">        <router-link
           v-for="(movie, index) in trendingMovies"
           :key="index"
           :to="{ name: 'movie-details', params: { id: movie.imdbID } }"
           class="text-decoration-none"
         >
         <MovieCard :movie="movie" class="movie-card "></MovieCard>
-        </router-link>
+        </router-link></div>
       </div>
     </div>
     <div class="mt-4" v-if="popularMovies">
       <h4 class="txt-gray-light fw-600 text-start px-2">Popular Movies</h4>
-      <div class="d-flex align-items-center h-300px px-2" >
-        <div class="scrolling-wrapper d-flex flex-nowrap gap-2 overflow-x-auto overflow-y-hidden">
+      <div class="d-flex align-items-center h-300px scrolling-wrapper px-2" style="overflow-x: auto;">
+        <div class="d-flex flex-row gap-3">
           <router-link v-for="(movie, index) in popularMovies" :key="index"
             :to="{ name: 'movie-details', params: { id: movie.imdbID } }" class="text-decoration-none">
             <MovieCard :movie="movie" />
@@ -26,8 +26,8 @@
     </div>
     <div class="mt-4" v-if="popularSeries">
       <h4 class="txt-gray-light fw-600 text-start px-2">Popular Series</h4>
-      <div class="d-flex align-items-center h-300px px-2" >
-        <div class="scrolling-wrapper d-flex flex-nowrap gap-2 overflow-x-auto overflow-y-hidden">
+      <div class="d-flex align-items-center h-300px scrolling-wrapper px-2" style="overflow-x: auto;">
+        <div class="d-flex flex-row gap-3">
           <router-link v-for="(movie, index) in popularSeries" :key="index"
             :to="{ name: 'movie-details', params: { id: movie.imdbID } }" class="text-decoration-none">
             <MovieCard :movie="movie" />
